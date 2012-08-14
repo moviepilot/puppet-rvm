@@ -9,7 +9,7 @@ class rvm::system($version='latest') {
     require => [
       Class['rvm::dependencies'],
     ],
-  } => file {
+  } -> file {
     '/usr/local/bin/bundle':
       ensure => link,
       target => '/usr/local/rvm/bin/bundle';
