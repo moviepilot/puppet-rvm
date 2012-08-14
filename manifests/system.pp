@@ -13,48 +13,48 @@ class rvm::system($version='latest') {
   file {
     '/usr/local/bin/rvm':
       ensure => link,
-      target => '/usr/local/rvm/bin/rvm';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rvm';
     '/usr/local/bin/bundle':
       ensure => link,
-      target => '/usr/local/rvm/bin/bundle';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/bundle';
     '/usr/local/bin/rake':
       ensure => link,
-      target => '/usr/local/rvm/bin/rake';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rake';
     '/usr/local/bin/rvm':
       ensure => link,
-      target => '/usr/local/rvm/bin/rvm';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rvm';
     '/usr/local/bin/rvm-auto-ruby':
       ensure => link,
-      target => '/usr/local/rvm/bin/rvm-auto-ruby';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rvm-auto-ruby';
     '/usr/local/bin/rvm-exec':
       ensure => link,
-      target => '/usr/local/rvm/bin/rvm-exec';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rvm-exec';
     '/usr/local/bin/rvm-installer':
       ensure => link,
-      target => '/usr/local/rvm/bin/rvm-installer';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rvm-installer';
     '/usr/local/bin/rvm-prompt':
       ensure => link,
-      target => '/usr/local/rvm/bin/rvm-prompt';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rvm-prompt';
     '/usr/local/bin/rvm-shell':
       ensure => link,
-      target => '/usr/local/rvm/bin/rvm-shell';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rvm-shell';
     '/usr/local/bin/rvm-smile':
       ensure => link,
-      target => '/usr/local/rvm/bin/rvm-smile';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rvm-smile';
     '/usr/local/bin/rvmsudo':
       ensure => link,
-      target => '/usr/local/rvm/bin/rvmsudo';
       require => Exec['system-rvm'],
+      target => '/usr/local/rvm/bin/rvmsudo';
     }
 }
 
