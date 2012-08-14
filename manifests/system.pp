@@ -11,10 +11,6 @@ class rvm::system($version='latest') {
     ],
   }
   file {
-    '/usr/local/bin/rvm':
-      ensure => link,
-      require => Exec['system-rvm'],
-      target => '/usr/local/rvm/bin/rvm';
     '/usr/local/bin/bundle':
       ensure => link,
       require => Exec['system-rvm'],
