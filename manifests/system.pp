@@ -9,47 +9,36 @@ class rvm::system($version='latest') {
     require => [
       Class['rvm::dependencies'],
     ],
-  }
-  file {
+  } => file {
     '/usr/local/bin/bundle':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/bundle';
     '/usr/local/bin/rake':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/rake';
     '/usr/local/bin/rvm':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/rvm';
     '/usr/local/bin/rvm-auto-ruby':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/rvm-auto-ruby';
     '/usr/local/bin/rvm-exec':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/rvm-exec';
     '/usr/local/bin/rvm-installer':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/rvm-installer';
     '/usr/local/bin/rvm-prompt':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/rvm-prompt';
     '/usr/local/bin/rvm-shell':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/rvm-shell';
     '/usr/local/bin/rvm-smile':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/rvm-smile';
     '/usr/local/bin/rvmsudo':
       ensure => link,
-      require => Exec['system-rvm'],
       target => '/usr/local/rvm/bin/rvmsudo';
     }
 }
